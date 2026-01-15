@@ -1,0 +1,119 @@
+:root {
+    --blanco-oscuro: #f4f4f1;
+    --champagne: #c7a760;
+    --negro-suave: #1c1c1c;
+}
+
+body {
+    margin: 0;
+    background: var(--blanco-oscuro);
+    color: var(--negro-suave);
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+.header {
+    text-align: center;
+    padding: 80px 20px 60px;
+}
+
+.logo {
+    width: 380px;
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    letter-spacing: 6px;
+    color: var(--champagne);
+    font-weight: 500;
+}
+
+.info {
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    font-size: 17px;
+}
+
+.bloque p {
+    margin: 6px 0;
+}
+
+.campo {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
+
+.tabla-cotizacion {
+    width: 90%;
+    margin: 50px auto;
+}
+
+.fila {
+    display: grid;
+    grid-template-columns: 80px 1.5fr 2fr 150px;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+}
+
+.encabezado {
+    border-bottom: 2px solid var(--champagne);
+    font-weight: 600;
+}
+
+input {
+    padding: 12px;
+    font-size: 16px;
+}
+
+.btn {
+    margin-top: 25px;
+    padding: 12px 36px;
+    background: var(--negro-suave);
+    color: var(--champagne);
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.totales {
+    width: 80%;
+    margin: 40px auto;
+    font-size: 18px;
+}
+
+.totales div {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+}
+
+.total {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--champagne);
+}
+
+.footer {
+    width: 80%;
+    margin: 70px auto 100px;
+    font-size: 17px;
+}
+
+.firma {
+    margin-top: 35px;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+/* PDF */
+@media print {
+    body { font-size: 21px; }
+    .logo { width: 520px; }
+    input { font-size: 21px; }
+}

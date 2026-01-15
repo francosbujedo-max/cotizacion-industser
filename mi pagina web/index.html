@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cotización | INDUSTSER</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+<div id="contenido-pdf">
+
+    <!-- HEADER -->
+    <header class="header">
+        <img src="industserconletra.png" class="logo">
+        <h1>COTIZACION
+    </header>
+
+    <!-- INFO -->
+    <section class="info">
+
+        <div class="bloque">
+            <p><strong>Cliente:</strong></p>
+            <input class="campo" placeholder="Nombre del cliente / Empresa">
+
+            <p><strong>Atención:</strong></p>
+            <p>Cotizo lo siguiente</p>
+        </div>
+
+        <div class="bloque">
+            <p><strong>Empresa:</strong></p>
+            <input class="campo" value="INDUSTSER">
+
+            <p><strong>Dirección:</strong> Obispo Carranza 1718 – Córdoba</p>
+            <p><strong>CUIL:</strong> 20-26744487-1</p>
+            <p><strong>Tel:</strong> 0351-5302916 / 8802976</p>
+
+            <p><strong>Fecha:</strong></p>
+            <input type="date" id="fecha" class="campo">
+        </div>
+
+    </section>
+
+    <!-- TABLA -->
+    <section class="tabla-cotizacion">
+        <div class="fila encabezado">
+            <span>Cant.</span>
+            <span>Producto</span>
+            <span>Descripción</span>
+            <span>Valor</span>
+        </div>
+
+        <div id="items"></div>
+
+        <button class="btn no-pdf" onclick="agregarItem()">+ Agregar producto</button>
+    </section>
+
+    <!-- TOTALES -->
+    <section class="totales">
+        <div><span>Subtotal</span><span>$ <span id="subtotal">0</span></span></div>
+        <div><span>IVA (21%)</span><span>$ <span id="iva">0</span></span></div>
+        <div class="total"><span>Total</span><span>$ <span id="total">0</span></span></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>Precios netos más IVA.</p>
+        <p>Sin más, saludos atentamente.</p>
+        <p class="firma">Bujedo Sebastian</p>
+    </footer>
+
+</div>
+
+<!-- ACCIONES -->
+<div class="acciones no-pdf">
+    <button class="btn pdf" onclick="descargarPDF()">Descargar PDF</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
